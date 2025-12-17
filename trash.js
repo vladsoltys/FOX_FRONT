@@ -6,13 +6,8 @@ let product = [
 
 // console.log(product)
 
-let arr = []
+let commonPrice = 0;
 for (let i = 0; i < product.length; i++) {
-    // console.log(users[i].groups)
-        arr.push(product[i].name)    
+    commonPrice = commonPrice + product[i].price    
 }
-// console.log(arr);
-
-let set = new Set(arr);
-
-console.log(set.has('Optimus'))
+console.log(commonPrice);
