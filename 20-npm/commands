@@ -1,0 +1,9 @@
+### COMMANDS TO INIT PROJECT AND INSTALL DEPENDENCIES
+
+npm init
+npm install colors
+
+### COMMANDS TO CREATE REACT APP ###
+
+npm i create-react-app
+npx create-react-app my-react-app
