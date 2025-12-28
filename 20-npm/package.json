@@ -1,0 +1,20 @@
+{
+  "name": "my_task",
+  "version": "1.0.0",
+  "description": "js_features_task",
+  "homepage": "https://github.com/vladsoltys/FOX_FRONT#readme",
+  "bugs": {
+    "url": "https://github.com/vladsoltys/FOX_FRONT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladsoltys/FOX_FRONT.git"
+  },
+  "license": "ISC",
+  "author": "Vlad",
+  "type": "commonjs",
+  "main": "1-colors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
