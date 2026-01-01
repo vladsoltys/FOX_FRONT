@@ -52,3 +52,31 @@ a) Fahrenheit; To recalculate on the Fahrenheit scale,
    it’s necessary to multiply the initial temperature value by 1.8 and add 32 
    to the result you get
 b) Kelvin. On the Kelvin scale the absolute zero corresponds to -273.15 degrees Celsius */
+
+let temp_C = 90;
+
+let temp_F = temp_C * 1.8 + 32
+let temp_K = temp_C + 273.15
+
+// console.log(temp_F, temp_K);
+
+/* A three-digit number is given. Find:
+a) its last digit (the number of units);
+b) the second digit from the right (the number of tens);
+c) the sum of all its digits.
+
+Solve this without converting the number to a string.
+
+Example:
+Input: 375
+a) 5
+b) 7
+c) 3 + 7 + 5 = 15 */
+
+let num = 375;
+
+let num_units = num % 10
+let num_tens = (num % 100 - num_units) / 10
+let digit_sum = ((num - (num % 100)) / 100) + num_tens + num_units
+// console.log(num_units, num_tens, digit_sum)
+
