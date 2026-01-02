@@ -80,3 +80,25 @@ let num_tens = (num % 100 - num_units) / 10
 let digit_sum = ((num - (num % 100)) / 100) + num_tens + num_units
 // console.log(num_units, num_tens, digit_sum)
 
+/* The date of birth of a person given. Figure their age out in minutes currently. */
+
+const now = new Date();
+const date_of_birth = new Date(1995, 11, 17, 3, 24);
+const date_diff_min = parseInt((now.getTime() - date_of_birth.getTime()) / 60000)
+
+// console.log(date_diff_min)
+
+/* Display the amount of seconds left to the end of the day */
+
+const allSecondsNow = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+const secondsLeft = 86400 - allSecondsNow; 
+
+// console.log(secondsLeft);
+
+
+/* Display the actual day of the week in word ( in Ukrainian/in Russian/ in your native language) */
+
+const now_day = now.getDay()
+const dayNames = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+
+// console.log(dayNames[now_day])
