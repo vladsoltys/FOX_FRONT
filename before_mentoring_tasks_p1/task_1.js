@@ -95,10 +95,48 @@ const secondsLeft = 86400 - allSecondsNow;
 
 // console.log(secondsLeft);
 
-
 /* Display the actual day of the week in word ( in Ukrainian/in Russian/ in your native language) */
 
 const now_day = now.getDay()
 const dayNames = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
 
 // console.log(dayNames[now_day])
+
+/*  Determine which of the two given dates in a year comes earlier.
+
+    Each date is specified by a month and a day.
+
+        Example:
+
+        const day1 = 14, month1 = 3;
+
+        const day2 = 23, month2 = 1; */
+
+
+const day1 = 14, month1 = 3;
+const day2 = 23, month2 = 1;
+
+const date_1 = `${day1}/${month1}`
+const date_2 = `${day2}/${month2}`
+
+if (month1 > month2) {
+    // console.log(date_2);
+} else if (month1 === month2 && day1 > day2) {
+    // console.log(date_2);
+} else {
+    // console.log(date_1);
+}
+
+/* Given the day number n in January (where 1≤n≤31), determine the corresponding day of the week. 
+   Assume that January 1st falls on a Monday.
+
+    Example:
+
+    If n=4, the output should be "Thursday". */
+
+let n = 30;
+
+let dayNamesENG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+console.log(dayNamesENG[(n-1) % 7])
+
