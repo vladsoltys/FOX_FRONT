@@ -50,4 +50,31 @@ for (let i = 100; i <= 500; i++) {
     sum += i
 }
 
-console.log(sum)
+// console.log(sum)
+
+/* Display all the integers multiple of three from 100 to 200. */
+
+for (let i = 100; i <= 200; i++) {
+    if (i % 3 === 0) {
+        // console.log(i)
+    }
+}
+
+/* Display the next pyramid:
+
+xx
+
+xxx
+
+xxxx
+
+xxxxx
+
+xxxxxx */
+let x = 'X'
+
+for (let i = 1; i <= 5; i++) {
+    x += 'X'
+    console.log('\n' + x)
+}
+
