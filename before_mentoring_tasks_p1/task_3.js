@@ -75,6 +75,38 @@ let x = 'X'
 
 for (let i = 1; i <= 5; i++) {
     x += 'X'
-    console.log('\n' + x)
+    // console.log('\n' + x)
 }
+
+
+/* A row is given, type into the console its “shape-shifter”.
+For example, there is: “I love you”, “uoy evol I” */
+
+function reverseString(str) {
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    result = str[i] + result
+  }
+  return result
+}
+
+// console.log(reverseString("I love you"));
+
+/* A freehand row is given, it must be displayed without ‘a, e, i, o, u’ letters.
+For instance: London is the capital of Great Britain
+
+The result: Lndn s th cptl f Grt Brtn */
+
+function withoutVowels(str){
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (!/[aeiou]/i.test(str[i])) {
+      result += str[i];
+    }
+  }
+  return result
+}
+
+console.log(withoutVowels("LOndon is the cApital of Great Britain"));
+
 
