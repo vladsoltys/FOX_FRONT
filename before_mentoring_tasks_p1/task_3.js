@@ -78,6 +78,18 @@ for (let i = 1; i <= 5; i++) {
     // console.log('\n' + x)
 }
 
+/* Write a code that brings the number A into the integral-value deg N (N>0). A number and a deg are entered from a keyboard.
+For instance: A = 2, N = 3, the answer is 8. */
+
+function numToPower(A, N) {
+  let result = 1;
+  for (let i = 1; i <= N; i++) {
+    result *= A
+  }
+  return result
+}
+
+console.log(numToPower(10, 2))
 
 /* A row is given, type into the console its “shape-shifter”.
 For example, there is: “I love you”, “uoy evol I” */
@@ -107,6 +119,6 @@ function withoutVowels(str){
   return result
 }
 
-console.log(withoutVowels("LOndon is the cApital of Great Britain"));
+// console.log(withoutVowels("LOndon is the cApital of Great Britain"));
 
 
