@@ -15,11 +15,10 @@ let perimeter = a * 4;
 Find the length of the circle and the area of the circle. */
 
 let r = 7;
-let pi = 3.14;
 
-let length = 2 * pi * r
-let area = pi * r * r
-// console.log(`length: ${length}, area: ${area}`)
+let length = 2 * Math.PI * r
+let area = Math.PI * r ** 2
+// console.log(`length: ${Math.round(length)}, area: ${Math.round(area)}`)
 
 /* Given the lengths of the legs of a right triangle, 
 find the length of its hypotenuse. */
@@ -76,8 +75,8 @@ c) 3 + 7 + 5 = 15 */
 let num = 375;
 
 let num_units = num % 10
-let num_tens = (num % 100 - num_units) / 10
-let digit_sum = ((num - (num % 100)) / 100) + num_tens + num_units
+let num_tens = Math.floor((num / 10) % 10);
+let digit_sum = Math.floor(num / 100) + num_tens + num_units
 // console.log(num_units, num_tens, digit_sum)
 
 /* The date of birth of a person given. Figure their age out in minutes currently. */
@@ -90,10 +89,11 @@ const date_diff_min = parseInt((now.getTime() - date_of_birth.getTime()) / 60000
 
 /* Display the amount of seconds left to the end of the day */
 
-const allSecondsNow = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
-const secondsLeft = 86400 - allSecondsNow; 
+const endOfTheDay = new Date();
+endOfTheDay.setHours(23, 59, 59, 999)
+const secondsLeft = Math.floor((endOfTheDay - now) / 1000)
 
-// console.log(secondsLeft);
+console.log(secondsLeft);
 
 /* Display the actual day of the week in word ( in Ukrainian/in Russian/ in your native language) */
 

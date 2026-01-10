@@ -17,8 +17,25 @@ const num_a = 73;
 const num_b = 78;
 const num_c = 12;
 
-const max = Math.max(num_a, num_b, num_c)
-const min = Math.min(num_a, num_b, num_c)
+let max;
+
+if (num_a > num_b && num_a > num_c){
+    max = num_a;
+} else if (num_b > num_a && num_b > num_c) {
+    max = num_b;
+} else {
+    max = num_c; 
+}
+
+let min;
+
+if (num_a < num_b && num_a < num_c){
+    min = num_a;
+} else if (num_b < num_a && num_b < num_c) {
+    min = num_b;
+} else {
+    min = num_c; 
+}
 
 // console.log(max, min)
 
@@ -171,20 +188,18 @@ const x_num = 123321;
 
 let x_result
 
-const first_three_digits = Math.floor(x_num / 1000)
-const second_three_digits = x_num % 1000
+const firstNumber = Math.floor(x_num / 100000);
+const secondNumber = Math.floor(x_num / 10000) % 10;
+const thirdNumber = Math.floor(x_num / 1000) % 10;
 
-const first_digit = Math.floor(first_three_digits / 100)
-const second_digit = Math.floor((first_three_digits % 100) / 10)
-const third_digit = first_three_digits % 10 
-const fourth_digit = Math.floor(second_three_digits / 100)
-const fifth_digit = Math.floor((second_three_digits % 100) / 10)
-const sixth_digit = second_three_digits % 10 
+const fourthNumber = Math.floor(x_num / 100) % 10;
+const fifthNumber = Math.floor(x_num / 10) % 10;
+const sixthNumber = x_num % 10; 
 
-const sum_of_first = first_digit + second_digit + third_digit
-const sum_of_second = fourth_digit + fifth_digit + sixth_digit
+const sumOfFirst = firstNumber + secondNumber + thirdNumber
+const sumOfSecond = fourthNumber + fifthNumber + sixthNumber
 
-if(sum_of_first === sum_of_second) x_result = 'x is lucky'
+if(sumOfFirst === sumOfSecond) x_result = 'x is lucky'
 else x_result = 'x is not lucky'
 
 console.log(x_result)
