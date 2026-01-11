@@ -68,10 +68,44 @@ Count and display the sum of all the positive array elements in the console. */
 Fill the elements with random numbers from 0 to 100. 
 Find the element (index) that has the highest value in the array and display it in the console. */
 
+// function arrCreate () {
+//     let arr = [];
+//     const min = 0;
+//     const max = 100;
+
+//     for (let i = 1; i <= 20; i++) {
+//         arr.push(Math.floor(Math.random() * (max - min + 1) + min))
+//     }
+
+//     return arr
+// }
+
+// const arr_2 = arrCreate()
+
+// function maxInArray(arr){
+//   let maxIndx = 0;
+
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > arr[maxIndx]) {
+//       maxIndx = i;
+//     }
+//   }
+//   return `${maxIndx} - ${arr[maxIndx]}`
+// };
+
+// console.log(arr_2)
+// console.log(maxInArray(arr_2));
+
+/* The height of 20 people is known. Find out the mean value of a height:
+
+Create a univariate array of int type, with the length of 20. 
+Fill the elements with random numbers from 150 to 195. 
+Count and display the arithmetic mean of array elements in the console (mean value of a height). */
+
 function arrCreate () {
     let arr = [];
-    const min = 0;
-    const max = 100;
+    const min = 150;
+    const max = 195;
 
     for (let i = 1; i <= 20; i++) {
         arr.push(Math.floor(Math.random() * (max - min + 1) + min))
@@ -82,18 +116,16 @@ function arrCreate () {
 
 const arr_2 = arrCreate()
 
-function maxInArray(arr){
-  let maxIndx = 0;
+function arrMean(arr){
+    let sum = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+    } 
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > arr[maxIndx]) {
-      maxIndx = i;
-    }
-  }
-  return `${maxIndx} - ${arr[maxIndx]}`
+    return sum / arr.length
 };
 
+
 console.log(arr_2)
-console.log(maxInArray(arr_2));
-
-
+console.log(arrMean(arr_2));
