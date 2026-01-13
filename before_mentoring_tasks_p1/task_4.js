@@ -103,7 +103,7 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-readline.question('Type a raw of English text: ', (txt) => {
+readline.question('Type a raw: ', (txt) => {
     function letterCount(txt) {
         let count = 0;
 
