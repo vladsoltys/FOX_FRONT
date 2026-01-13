@@ -95,3 +95,32 @@ function arrMean(arr){
 
 // console.log(arr)
 // console.log(arrMean(arr));
+
+/* Ask a user to type a raw of English text, count how many times there are a, u, i letters. */
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+readline.question('Type a raw of English text: ', (txt) => {
+    function letterCount(txt) {
+        let count = 0;
+
+        for(let i = 0; i < txt.length; i++) {
+            if(/[aui]/.test(txt[i])) {
+                count ++
+            }
+        }
+        return count;
+    }
+
+    console.log(letterCount(txt))
+    readline.close();
+});
+
+
+
+
+
+
