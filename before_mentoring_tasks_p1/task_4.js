@@ -103,9 +103,15 @@ function arrMean(arr){
 //     output: process.stdout
 // });
 
+<<<<<<< HEAD
 // readline.question('Type a raw of English text: ', (txt) => {
 //     function letterCount(txt) {
 //         let count = 0;
+=======
+readline.question('Type a raw: ', (txt) => {
+    function letterCount(txt) {
+        let count = 0;
+>>>>>>> c481f3ac95bac99cf90d6575937a8c23580d2e97
 
 //         for(let i = 0; i < txt.length; i++) {
 //             if(/[aui]/.test(txt[i])) {
