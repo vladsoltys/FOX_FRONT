@@ -60,7 +60,7 @@ Find the element (index) that has the highest value in the array and display it 
 
 arr = arrCreate(0, 100, 20);
 
-function maxInArray(arr){
+function maxIndxInArray(arr){
   let maxIndx = 0;
 
   for (let i = 1; i < arr.length; i++) {
@@ -68,11 +68,12 @@ function maxInArray(arr){
       maxIndx = i;
     }
   }
-  return `${maxIndx} - ${arr[maxIndx]}`
+//   console.log(`max: ${maxIndx} - ${arr[maxIndx]}`)
+  return maxIndx
 };
 
 // console.log(arr)
-// console.log(maxInArray(arr));
+// console.log(maxIndxInArray(arr));
 
 /* The height of 20 people is known. Find out the mean value of a height:
 
@@ -103,16 +104,10 @@ function arrMean(arr){
 //     output: process.stdout
 // });
 
-<<<<<<< HEAD
-// readline.question('Type a raw of English text: ', (txt) => {
+
+// readline.question('Type a raw: ', (txt) => {
 //     function letterCount(txt) {
 //         let count = 0;
-=======
-readline.question('Type a raw: ', (txt) => {
-    function letterCount(txt) {
-        let count = 0;
->>>>>>> c481f3ac95bac99cf90d6575937a8c23580d2e97
-
 //         for(let i = 0; i < txt.length; i++) {
 //             if(/[aui]/.test(txt[i])) {
 //                 count ++
@@ -155,7 +150,7 @@ function inPositiveConvert(arr) {
 }
 
 inPositiveConvert(arr)
-console.log(arr)
+// console.log(arr)
 
 /* Create a univariate array of int type, with the length of N. 
 Fill the elements with random numbers from 1 to 100. 
@@ -166,6 +161,39 @@ For example there are:
 The result: 
 
 [20, 50, 30, 10, 40, 45] */
+
+// let N = Math.floor(Math.random() * 100)
+let N = 20
+
+arr = arrCreate(1, 100, N);
+
+function minMaxSwap (arr) {
+    
+    let maxIndx = 0;
+    let minIndx = 0;
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[maxIndx]) {
+            maxIndx = i;
+        }
+    }
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < arr[minIndx]) {
+            minIndx = i;
+        }
+    }
+
+    let temp = arr[minIndx]
+    arr[minIndx] = arr[maxIndx]
+    arr[maxIndx] = temp
+
+    return arr
+}
+
+console.log(arr)
+minMaxSwap (arr)
+console.log(arr)
 
 
 
