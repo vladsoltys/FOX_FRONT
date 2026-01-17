@@ -232,8 +232,36 @@ function biggerThanMean(arr) {
 
 let result = biggerThanMean(arr)
 
-console.log(arr)
-console.log(result)
+// console.log(arr)
+// console.log(result)
+
+/* A user enters a row with symbols of different cases (uppercase and lowercase letters). 
+Write a code that changes the case of every symbol to the opposite one. 
+
+For example, if the input is, "PracTice MaKeS PeRfecT", 
+the output should be the array "pRACtICE mAkEs pErFECt". */
+
+// const readline = require('readline').createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// })
+
+// readline.question('Enter a rowl: ', (str) => {
+//     function invertCase(str) {
+//         let result = '';
+//         for (let i = 0; i < str.length; i++) {
+//             let char = str[i];
+//             if (char === char.toUpperCase()) {
+//                 result += char.toLowerCase();
+//             } else {
+//                 result += char.toUpperCase();
+//             }
+//         }
+//         return result;
+//     }
+//     console.log(invertCase(str));
+//     readline.close()
+// });
 
 
 
