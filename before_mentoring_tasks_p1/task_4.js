@@ -191,12 +191,49 @@ function minMaxSwap (arr) {
     return arr
 }
 
+// console.log(arr)
+// minMaxSwap (arr)
+// console.log(arr)
+
+/* Create a univariate array of int type, with the length of N. 
+Fill the elements with random numbers from 1 to 100. 
+Find the arithmetic mean of its elements. 
+Display only those array elements that are bigger than the found arithmetic mean. 
+
+For instance, there are:
+
+[10, 20, 30, 40, 50]
+
+The result:
+40, 50 */
+
+N = 20
+
+arr = arrCreate(1, 100, N);
+
+function biggerThanMean(arr) {
+    let sum = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    } 
+    
+    let mean = sum / arr.length
+
+    let result = []
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > mean){
+            result.push(arr[i])
+        }
+    }
+
+    return result.join(', ')
+}
+
+let result = biggerThanMean(arr)
+
 console.log(arr)
-minMaxSwap (arr)
-console.log(arr)
-
-
-
+console.log(result)
 
 
 
