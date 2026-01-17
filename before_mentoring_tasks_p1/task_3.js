@@ -81,15 +81,45 @@ for (let i = 1; i <= 5; i++) {
 /* Write a code that brings the number A into the integral-value deg N (N>0). A number and a deg are entered from a keyboard.
 For instance: A = 2, N = 3, the answer is 8. */
 
-function numToPower(A, N) {
-  let result = 1;
-  for (let i = 1; i <= N; i++) {
-    result *= A
-  }
-  return result
-}
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-console.log(numToPower(10, 2))
+readline.question('Enter num A: ', (A) => {
+  readline.question('Enter deg N (N>0): ', (N) => {
+    function numToPower(A, N) {
+      let result = 1;
+      for (let i = 1; i <= N; i++) {
+          result *= A
+      }
+      return result
+    }
+    console.log(numToPower(A, N));
+    readline.close();
+  });
+}
+);
+
+// readline.question('Enter num A: ', (A) => {
+//   readline.question('Enter deg N (N>0): ', (N) => {
+//     if (N > 0) {  
+//       function numToPower(A, N) {
+//         let result = 1;
+//         for (let i = 1; i <= N; i++) {
+//           result *= A
+//       }
+//       return result
+//       }
+//       console.log(numToPower(A, N));
+//     } else {
+//       console.log('N must be greater than 0');
+//     }
+//     readline.close();
+//   });
+// }
+// );
+
 
 /* A row is given, type into the console its “shape-shifter”.
 For example, there is: “I love you”, “uoy evol I” */
